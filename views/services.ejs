@@ -9,12 +9,43 @@
       <%- include('./partials/header'); %>
     </header>
 
-    <div class="container px-4 py-5">
-      <h1><%= title %></h1>
-      <p>Welcome to <%= title %></p>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <!-- <h2 class="elementor-heading-title elementor-size-default">My services</h2> -->
+          <h1 class="fw-light">I Can Do For You</h1>
+          <p class="lead text-muted">Experience our extremely high-quality end-to-end services for your website, digital marketing, and mobile application projects.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container px-4 py-5" id="featured-3">
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+            <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
+          </div>
+          <h3 class="fs-2">Web Development</h3>
+          <p>We write clean code to bring big ideas to life. Our passion is to configure the nuts & bolts that BUILD the foundation for immersive product experiences.</p>
+        </div>
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+            <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+          </div>
+          <h3 class="fs-2">Mobile App Development</h3>
+          <p>We deliver quality with our mobile app development services. We design and deliver innovative mobile application development & solutions.</p>
+        </div>
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+            <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
+          </div>
+          <h3 class="fs-2">Branding Desing</h3>
+          <p>We deliver measurable ROI and drive profitability via high converting campaigns across a range of organic & paid media channels.</p>
+        </div>
+      </div>
     </div>
 
-    <footer>
+    <footer class="pt-3 mt-4 text-muted border-top">
       <%- include('./partials/footer'); %>
     </footer>
   </main>
