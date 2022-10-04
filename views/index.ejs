@@ -9,9 +9,31 @@
       <%- include('./partials/header'); %>
     </header>
 
-    <div class="container px-4 py-5">
-      <h1><%= title %></h1>
-      <p>Welcome to <%= title %></p>
+    <div class="container py-4">
+      <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold">Hi, there!</h1>
+          <p class="col-md-8 fs-4">Let's work as a team to create successful online experiences. <br>By heart and by action :)</p>
+          <a href="/about" class="btn btn-primary btn-lg" type="button">Learn about me</a>
+        </div>
+      </div>
+
+      <div class="row align-items-md-stretch">
+        <div class="col-md-6">
+          <div class="h-100 p-5 text-bg-dark rounded-3">
+            <h2>Our Mission</h2>
+            <p>By providing unique and personalized digital solutions, we aim to strengthen the capabilities of enterprises and to accelerate their growth.</p>
+            <a href="/projects" class="btn btn-outline-light" type="button">See our work</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="h-100 p-5 bg-light border rounded-3">
+            <h2>Our Vision</h2>
+            <p>Synergy between our customer and technology knowledge will help us develop the best digital solutions that will help businesses achieve their goals more efficiently and effectively.</p>
+            <a href="/contact" class="btn btn-outline-secondary" type="button">Get in touch</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer>
