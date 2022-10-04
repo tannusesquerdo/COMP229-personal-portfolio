@@ -2,6 +2,8 @@
 <html>
   <head>
     <%- include('./partials/head'); %>
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/carousel.css" rel="stylesheet">
   </head>
   <body class="">
   <main>
@@ -9,12 +11,70 @@
       <%- include('./partials/header'); %>
     </header>
 
-    <div class="container px-4 py-5">
-      <h1><%= title %></h1>
-      <p>Welcome to <%= title %></p>
-    </div>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <!-- <h2 class="elementor-heading-title elementor-size-default">My services</h2> -->
+          <h1 class="fw-light">Some Recent Work</h1>
+          <p class="lead text-muted">Here are some examples of our work that helps our clients deliver the best products to their clients.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="container">
 
-    <footer>
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Coffee&Joy. <span class="text-muted">Mobile App Development.</span></h2>
+          <p class="lead">Mobile App Development with React Native for a startup in Brazil.</p>
+          <p><a class="btn btn-secondary" target="_blank" href="https://apps.apple.com/ca/app/coffee-joy/id1486471617">View on Store »</a></p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" width="500" height="500" src="/images/project-1.jpg" alt="">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Dodoo. <span class="text-muted">Website Development.</span></h2>
+          <p class="lead">Web Development to convert PSD to HTML. Plain JavaScript, CSS, and HTML.</p>
+          <p><a class="btn btn-secondary" target="_blank" href="https://dodoo-tannus.herokuapp.com/">View Live »</a></p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img class="featurette-image img-fluid mx-auto" width="500" height="500" src="/images/project-2.jpg" alt="">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Atrium. <span class="text-muted">Website Development.</span></h2>
+          <p class="lead">Website development built with Ruby on Rails for Beauty Salon in Brazil.</p>
+          <p><a class="btn btn-secondary" target="_blank" href="https://atriumsalao.herokuapp.com/">View Live »</a></p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" width="500" height="500" src="/images/project-3.jpg" alt="">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Petfinder. <span class="text-muted">Mobile App Development.</span></h2>
+          <p class="lead">Case studie of a Web App Development with Ionic. In this project I studied some design concepts and Ionic Framework for mobile apps.</p>
+          <p><a class="btn btn-secondary" target="_blank" href="http://petfinder-ionic-app.herokuapp.com/#/home">View Live »</a></p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img class="featurette-image img-fluid mx-auto" width="500" height="500" src="/images/project-4.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <footer class="pt-3 mt-4 text-muted border-top">
       <%- include('./partials/footer'); %>
     </footer>
   </main>
