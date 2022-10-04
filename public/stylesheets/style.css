@@ -1,7 +1,14 @@
+/*
+  file: style.css
+  Atuhor: Tannus Esquerdo
+  ID: #301288342
+  Date: 2022-10-03
+*/
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+} 
 
 a {
   color: #00B7FF;
