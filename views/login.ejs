@@ -1,0 +1,26 @@
+<%/* 
+  file: login.ejs
+  Atuhor: Tannus Esquerdo
+  ID: #301288342
+  Date: 2022-10-14
+*/%>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head'); %>
+    <link href="stylesheets/signin.css" rel="stylesheet">
+  </head>
+  <body class="">
+  <main class="form-signin w-100 m-auto">
+    <form>
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      <%- include('./partials/login_form'); %>
+    </form>
+
+    <footer class="pt-3 mt-4 text-muted border-top">
+      <%- include('./partials/footer'); %>
+    </footer>
+  </main>
+  </body>
+</html>
