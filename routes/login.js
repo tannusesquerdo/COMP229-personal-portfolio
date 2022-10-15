@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', passport.authenticate('local', {
-  successRedirect: '/',
+  successRedirect: '/dashboard/contacts',
   failureRedirect: '/login',
   failureFlash: true,
 }), function(req, res) {
