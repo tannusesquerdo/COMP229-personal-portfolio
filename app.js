@@ -1,8 +1,17 @@
 var createError = require('http-errors');
 var express = require('express');
+var passport = require('passport');
+var bodyParser = require('body-parser');
+var LocalStrategy = require('passport-local').Strategy;
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var flash = require('connect-flash');
+var db = require('./database');
+
+//passport config
+// Passport Config
+require('./config/passport')(passport);
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -12,6 +21,8 @@ var servicesRouter = require('./routes/services');
 var contactRouter = require('./routes/contact');
 var loginRouter = require('./routes/login');
 
+var User = require('./models/userModel');
+
 var app = express();
 
 // view engine setup
@@ -20,9 +31,26 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(require('express-session')({
+  secret: 'node comp229 mongo',
+  resave: false,
+  saveUninitialized: false,
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+
+// Global variables
+app.use(function(request, response, next) {
+  response.locals.success_msg = request.flash('success_msg');
+  response.locals.error_msg = request.flash('error_msg');
+  response.locals.error = request.flash('error');
+  next();
+});
+
 
 app.use('/', indexRouter);
 app.use('/about', aboutRouter);
