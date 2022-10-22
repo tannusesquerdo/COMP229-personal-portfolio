@@ -1,0 +1,26 @@
+<div class="table-responsive">
+  <table class="table table-striped table-sm align-middle">
+    <caption>List of Business Contacts</caption>
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">E-mail</th>
+        <th scope="col">Contact Number</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (var i = 0; i < contacts_list.length; i++) { %>
+        <tr>
+        <td><%= contacts_list[i].name %></td>
+        <td><%= contacts_list[i].email %></td>
+        <td><%= contacts_list[i].phone %></td>
+        <td class="align-center">
+          <a href="contacts/edit/<%= contacts_list[i]._id %>" type="button" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
+          <a href="contacts/edit/<%= contacts_list[i]._id %>" data-id="<%= contacts_list[i]._id %>" type="button" class="btn btn-danger delete-contact-btn"><i class="bi bi-trash3"></i></a>
+        </td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>

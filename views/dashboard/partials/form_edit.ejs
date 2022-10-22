@@ -1,0 +1,24 @@
+<form id="form-edit">
+  <input type="hidden" name="_id" value="<%= data._id %>">
+  <div class="form-floating mb-3">
+    <input type="text" name="name" class="form-control rounded-3" id="floatingInput" placeholder="John Doe" value="<%= data.name %>">
+    <label for="floatingInput">Name</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input type="email" name="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com" value="<%= data.email %>">
+    <label for="floatingInput">Email address</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input type="text" name="phone" class="form-control rounded-3" id="floatingPassword" placeholder="Phone" value="<%= data.phone %>">
+    <label for="floatingPassword">Phone</label>
+  </div>
+  <div class="col-md-8">
+    <a href="/dashboard/contacts" class="btn btn-lg btn-light" type="submit">
+      <span>Cancel</span>
+    </a>
+    <button id="update-contact" class="btn btn-lg rounded-3 btn-primary" type="submit">
+      <span>Save changes</span>
+    </button>
+    
+  </div>
+</form>
